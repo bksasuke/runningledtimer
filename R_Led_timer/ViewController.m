@@ -37,7 +37,7 @@
 }
 -(void) r_Led {
     [self turnOffLed:lastOnLed];
-   if ( lastOnLed <112)
+   if ( lastOnLed <63)
        lastOnLed++;
    else  lastOnLed= -1;
     
@@ -92,7 +92,7 @@
 
 -(void) drawRowOfBalls: (int) numberBalls {
     CGFloat space = [self spaceBetweenBallCenterWhenNumberBallIsKnown:numberBalls];
-    for(int j =0; j < 14; j++) {
+    for(int j =0; j < 8; j++) {
         for(int i =0; i< 8; i++)
         {
             [self placeGrayBallAtX:_margin +i * space
